@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Feliz Cumpleaños</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: "Arial", sans-serif;
+        background-color: #ffebee;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        padding: 20px;
+      }
+
+      h1 {
+        color: #d32f2f;
+        margin-bottom: 30px;
+        text-align: center;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+      }
+
+      .cards-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+        width: 100%;
+        max-width: 500px;
+      }
+
+      .card {
+        width: 80px;
+        height: 120px;
+        perspective: 1000px;
+        cursor: pointer;
+      }
+
+      .card-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        transition: transform 0.8s;
+        transform-style: preserve-3d;
+      }
+
+      .card.flipped .card-inner {
+        transform: rotateY(180deg);
+      }
+
+      .card-front,
+      .card-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .card-front {
+        background: linear-gradient(135deg, #ff5252, #d32f2f);
+        color: white;
+        font-size: 24px;
+        font-weight: bold;
+      }
+
+      .card-back {
+        background-color: white;
+        transform: rotateY(180deg);
+        overflow: hidden;
+      }
+
+      .card-back img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      @media (max-width: 400px) {
+        .card {
+          width: 70px;
+          height: 105px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>¡Feliz Cumpleaños Amor!</h1>
+
+    <div class="cards-container">
+      <!-- Tarjeta F -->
+      <div class="card" onclick="flipCard(this)">
+        <div class="card-inner">
+          <div class="card-front">F</div>
+          <div class="card-back">
+            <img src="1.jpeg" alt="Celebración" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Tarjeta E -->
+      <div class="card" onclick="flipCard(this)">
+        <div class="card-inner">
+          <div class="card-front">E</div>
+          <div class="card-back">
+            <img src="2.jpeg" alt="Globos" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Tarjeta L -->
+      <div class="card" onclick="flipCard(this)">
+        <div class="card-inner">
+          <div class="card-front">L</div>
+          <div class="card-back">
+            <img src="3.jpeg" alt="Pastel" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Tarjeta I -->
+      <div class="card" onclick="flipCard(this)">
+        <div class="card-inner">
+          <div class="card-front">I</div>
+          <div class="card-back">
+            <img src="4.jpeg" alt="Decoración" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Tarjeta Z -->
+      <div class="card" onclick="flipCard(this)">
+        <div class="card-inner">
+          <div class="card-front">Z</div>
+          <div class="card-back">
+            <img src="5.jpeg" alt="Confeti" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Tarjeta C -->
+      <div class="card" onclick="flipCard(this)">
+        <div class="card-inner">
+          <div class="card-front">C</div>
+          <div class="card-back">
+            <img src="6.jpeg" alt="Champán" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Tarjeta U -->
+      <div class="card" onclick="flipCard(this)">
+        <div class="card-inner">
+          <div class="card-front">U</div>
+          <div class="card-back">
+            <img src="7.jpeg" alt="Champán" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Tarjeta M -->
+      <div class="card" onclick="flipCard(this)">
+        <div class="card-inner">
+          <div class="card-front">M</div>
+          <div class="card-back">
+            <img src="8.jpeg" alt="Decoración" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Tarjeta P -->
+      <div class="card" onclick="flipCard(this)">
+        <div class="card-inner">
+          <div class="card-front">P</div>
+          <div class="card-back">
+            <img src="9.jpeg" alt="Decoración" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Tarjeta L -->
+      <div class="card" onclick="flipCard(this)">
+        <div class="card-inner">
+          <div class="card-front">L</div>
+          <div class="card-back">
+            <img src="10.jpeg" alt="Pastel" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Tarjeta E -->
+      <div class="card" onclick="flipCard(this)">
+        <div class="card-inner">
+          <div class="card-front">E</div>
+          <div class="card-back">
+            <img src="11.jpeg" alt="Globos" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Tarjeta A -->
+      <div class="card" onclick="flipCard(this)">
+        <div class="card-inner">
+          <div class="card-front">A</div>
+          <div class="card-back">
+            <img src="12.jpeg" alt="Regalos" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Tarjeta Ñ -->
+      <div class="card" onclick="flipCard(this)">
+        <div class="card-inner">
+          <div class="card-front">Ñ</div>
+          <div class="card-back">
+            <img src="13.jpeg" alt="Confeti" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Tarjeta O -->
+      <div class="card" onclick="flipCard(this)">
+        <div class="card-inner">
+          <div class="card-front">O</div>
+          <div class="card-back">
+            <img src="14.jpeg" alt="Velas" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Tarjeta S -->
+      <div class="card" onclick="flipCard(this)">
+        <div class="card-inner">
+          <div class="card-front">S</div>
+          <div class="card-back">
+            <img src="15.jpeg" alt="Champán" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function flipCard(card) {
+        card.classList.toggle("flipped");
+      }
+
+      // Opcional: voltear todas las cartas automáticamente después de 2 segundos
+      setTimeout(() => {
+        const cards = document.querySelectorAll(".card");
+        cards.forEach((card, index) => {
+          setTimeout(() => {
+            card.classList.add("flipped");
+          }, index * 200);
+        });
+      }, 2000);
+
+      // Opcional: reiniciar la animación cada 10 segundos
+      setInterval(() => {
+        const cards = document.querySelectorAll(".card");
+        cards.forEach((card) => {
+          card.classList.remove("flipped");
+        });
+
+        setTimeout(() => {
+          cards.forEach((card, index) => {
+            setTimeout(() => {
+              card.classList.add("flipped");
+            }, index * 200);
+          });
+        }, 1000);
+      }, 15000);
+    </script>
+  </body>
+</html>
